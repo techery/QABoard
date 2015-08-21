@@ -8,16 +8,14 @@
 
 #import "KeyboardViewController.h"
 #import "QABoardConstants.h"
-#import "Masonry.h"
 
 @interface KeyboardViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UIButton *nextKeyboardButton;
+@property (nonatomic, weak) IBOutlet UIButton *nextKeyboardButton;
 
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) UIView *contentView;
-@property (nonatomic, strong) UIButton *literalButton;
-@property (nonatomic, strong) UIButton *testerButton;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UIButton *literalButton;
+@property (nonatomic, weak) IBOutlet UIButton *testerButton;
 
 @property (nonatomic, assign) BOOL isWordsSelected;
 @property (nonatomic, strong) NSArray *words;
@@ -36,21 +34,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self loadButtons];
-    
-    self.contentView = [[UIView alloc] initWithFrame:CGRectZero];
-    self.contentView.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:self.contentView];
-    
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero];
-    self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    UINib *nib = [UINib nibWithNibName:@"QAKeyboardView" bundle:nil];
+    NSArray *views = [nib instantiateWithOwner:self options:nil];
+    self.view = views.firstObject;
     [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:NSStringFromClass(UITableViewCell.class)];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    [self.contentView addSubview:self.tableView];
-    
-    [self setupConstraints];
-    [self loadWords];
+    [self loadWords:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,62 +46,13 @@
     // Dispose of any resources that can be recreated
 }
 
-#pragma mark - UI Helpers
-
-- (void)loadButtons {
-    self.nextKeyboardButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [self.nextKeyboardButton setTitle:NSLocalizedString(@"Next Keyboard", @"Title for 'Next Keyboard' button") forState:UIControlStateNormal];
-    [self.nextKeyboardButton sizeToFit];
-    self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.nextKeyboardButton addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.nextKeyboardButton];
-    
-    self.literalButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.literalButton setTitle:@"Phrases" forState:UIControlStateNormal];
-    self.literalButton.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:self.literalButton];
-    [self.literalButton addTarget:self action:@selector(loadWords) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.testerButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.testerButton setTitle:@"Testers" forState:UIControlStateNormal];
-    self.testerButton.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:self.testerButton];
-    [self.testerButton addTarget:self action:@selector(loadTestersData) forControlEvents:UIControlEventTouchUpInside];
-}
-
-- (void)setupConstraints {
-    
-    [self.nextKeyboardButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(@(0));
-        make.top.equalTo(@(0));
-        make.width.equalTo(self.view).multipliedBy(0.33);
-    }];
-    [self.literalButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.nextKeyboardButton.mas_right);
-        make.top.equalTo(@(0));
-        make.height.equalTo(self.nextKeyboardButton);
-        make.width.equalTo(self.view).multipliedBy(0.33);
-    }];
-    [self.testerButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.literalButton.mas_right);
-        make.top.equalTo(@(0));
-        make.height.equalTo(self.nextKeyboardButton);
-        make.width.equalTo(self.view).multipliedBy(0.33);
-    }];
-    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.nextKeyboardButton.mas_bottom);
-        make.left.equalTo(@(0));
-        make.width.equalTo(self.view);
-        make.bottom.equalTo(@(0));
-    }];
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.contentView);
-    }];
-}
-
 #pragma mark - Logic Helpers
 
-- (void)loadWords {
+- (IBAction)nextKeyboardPressed:(id)sender {
+    [self advanceToNextInputMode];
+}
+
+- (IBAction)loadWords:(id)sender {
     if (self.isWordsSelected) {
         return;
     }
@@ -139,7 +78,7 @@
     }];
 }
 
-- (void)loadTestersData {
+- (IBAction)loadTestersData:(id)sender {
     if (!self.isWordsSelected) {
         return;
     }
