@@ -1,13 +1,6 @@
-//
-//  ViewController.m
-//  DreamTripsKeyboard
-//
-//  Created by Vladimir Bondarev on 8/18/15.
-//  Copyright (c) 2015 Techery. All rights reserved.
-//
 
 #import "ViewController.h"
-#import "DreamTripsKeyboardConstants.h"
+#import "QABoardConstants.h"
 
 @interface ViewController ()
 
@@ -45,7 +38,7 @@
 
 - (NSUserDefaults *)sharedSettings {
     if (!_sharedSettings) {
-        _sharedSettings = [[NSUserDefaults alloc] initWithSuiteName:KDreamTripsDefaults];
+        _sharedSettings = [[NSUserDefaults alloc] initWithSuiteName:kQABoardDefaults];
     }
     return _sharedSettings;
 }

@@ -1,0 +1,648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF2A4B3D1B87B57200DE935F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A4B3C1B87B57200DE935F /* main.m */; };
+		EF2A4B401B87B57200DE935F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A4B3F1B87B57200DE935F /* AppDelegate.m */; };
+		EF2A4B431B87B57200DE935F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A4B421B87B57200DE935F /* ViewController.m */; };
+		EF2A4B461B87B57200DE935F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF2A4B441B87B57200DE935F /* Main.storyboard */; };
+		EF2A4B481B87B57200DE935F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF2A4B471B87B57200DE935F /* Images.xcassets */; };
+		EF2A4B4B1B87B57200DE935F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF2A4B491B87B57200DE935F /* LaunchScreen.xib */; };
+		EF2A4B571B87B57300DE935F /* QABoardLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A4B561B87B57300DE935F /* QABoardLibTests.m */; };
+		EF2A4B8D1B87B7F600DE935F /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A4B8C1B87B7F600DE935F /* KeyboardViewController.m */; };
+		EF2A4B901B87B7F600DE935F /* QA Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EF2A4B871B87B7F600DE935F /* QA Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EF2A4B961B87BF1C00DE935F /* default_words.json in Resources */ = {isa = PBXBuildFile; fileRef = EF2A4B951B87BF1C00DE935F /* default_words.json */; };
+		EF2A4BD21B87C0CF00DE935F /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A4BBC1B87C0CF00DE935F /* MASCompositeConstraint.m */; };
+		EF2A4BD31B87C0CF00DE935F /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A4BBF1B87C0CF00DE935F /* MASConstraint.m */; };
+		EF2A4BD41B87C0CF00DE935F /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A4BC11B87C0CF00DE935F /* MASConstraintMaker.m */; };
+		EF2A4BD51B87C0CF00DE935F /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A4BC31B87C0CF00DE935F /* MASLayoutConstraint.m */; };
+		EF2A4BD61B87C0CF00DE935F /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A4BC71B87C0CF00DE935F /* MASViewAttribute.m */; };
+		EF2A4BD71B87C0CF00DE935F /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A4BC91B87C0CF00DE935F /* MASViewConstraint.m */; };
+		EF2A4BD81B87C0CF00DE935F /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A4BCB1B87C0CF00DE935F /* NSArray+MASAdditions.m */; };
+		EF2A4BD91B87C0CF00DE935F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A4BCE1B87C0CF00DE935F /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		EF2A4BDA1B87C0CF00DE935F /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A4BD01B87C0CF00DE935F /* View+MASAdditions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF2A4B511B87B57300DE935F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF2A4B2F1B87B57200DE935F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF2A4B361B87B57200DE935F;
+			remoteInfo = QABoardLib;
+		};
+		EF2A4B8E1B87B7F600DE935F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF2A4B2F1B87B57200DE935F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF2A4B861B87B7F600DE935F;
+			remoteInfo = "QA Keyboard";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF2A4B941B87B7F600DE935F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EF2A4B901B87B7F600DE935F /* QA Keyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EF2A4B371B87B57200DE935F /* QABoardLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QABoardLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2A4B3B1B87B57200DE935F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF2A4B3C1B87B57200DE935F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF2A4B3E1B87B57200DE935F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF2A4B3F1B87B57200DE935F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF2A4B411B87B57200DE935F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EF2A4B421B87B57200DE935F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF2A4B451B87B57200DE935F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF2A4B471B87B57200DE935F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EF2A4B4A1B87B57200DE935F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EF2A4B501B87B57300DE935F /* QABoardLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QABoardLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2A4B551B87B57300DE935F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF2A4B561B87B57300DE935F /* QABoardLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QABoardLibTests.m; sourceTree = "<group>"; };
+		EF2A4B601B87B5EA00DE935F /* QABoardConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QABoardConstants.h; sourceTree = "<group>"; };
+		EF2A4B871B87B7F600DE935F /* QA Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "QA Keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2A4B8A1B87B7F600DE935F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF2A4B8B1B87B7F600DE935F /* KeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
+		EF2A4B8C1B87B7F600DE935F /* KeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
+		EF2A4B951B87BF1C00DE935F /* default_words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = default_words.json; sourceTree = "<group>"; };
+		EF2A4BBB1B87C0CF00DE935F /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		EF2A4BBC1B87C0CF00DE935F /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		EF2A4BBD1B87C0CF00DE935F /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		EF2A4BBE1B87C0CF00DE935F /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		EF2A4BBF1B87C0CF00DE935F /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		EF2A4BC01B87C0CF00DE935F /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		EF2A4BC11B87C0CF00DE935F /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		EF2A4BC21B87C0CF00DE935F /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		EF2A4BC31B87C0CF00DE935F /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		EF2A4BC41B87C0CF00DE935F /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		EF2A4BC51B87C0CF00DE935F /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		EF2A4BC61B87C0CF00DE935F /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		EF2A4BC71B87C0CF00DE935F /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		EF2A4BC81B87C0CF00DE935F /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		EF2A4BC91B87C0CF00DE935F /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		EF2A4BCA1B87C0CF00DE935F /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		EF2A4BCB1B87C0CF00DE935F /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		EF2A4BCC1B87C0CF00DE935F /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		EF2A4BCD1B87C0CF00DE935F /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		EF2A4BCE1B87C0CF00DE935F /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		EF2A4BCF1B87C0CF00DE935F /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		EF2A4BD01B87C0CF00DE935F /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		EF2A4BD11B87C0CF00DE935F /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF2A4B341B87B57200DE935F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF2A4B4D1B87B57300DE935F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF2A4B841B87B7F600DE935F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF2A4B2E1B87B57200DE935F = {
+			isa = PBXGroup;
+			children = (
+				EF2A4B391B87B57200DE935F /* QABoardLib */,
+				EF2A4B531B87B57300DE935F /* QABoardLibTests */,
+				EF2A4B881B87B7F600DE935F /* QA Keyboard */,
+				EF2A4B381B87B57200DE935F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF2A4B381B87B57200DE935F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF2A4B371B87B57200DE935F /* QABoardLib.app */,
+				EF2A4B501B87B57300DE935F /* QABoardLibTests.xctest */,
+				EF2A4B871B87B7F600DE935F /* QA Keyboard.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF2A4B391B87B57200DE935F /* QABoardLib */ = {
+			isa = PBXGroup;
+			children = (
+				EF2A4B3E1B87B57200DE935F /* AppDelegate.h */,
+				EF2A4B3F1B87B57200DE935F /* AppDelegate.m */,
+				EF2A4B411B87B57200DE935F /* ViewController.h */,
+				EF2A4B421B87B57200DE935F /* ViewController.m */,
+				EF2A4B441B87B57200DE935F /* Main.storyboard */,
+				EF2A4B471B87B57200DE935F /* Images.xcassets */,
+				EF2A4B491B87B57200DE935F /* LaunchScreen.xib */,
+				EF2A4B3A1B87B57200DE935F /* Supporting Files */,
+				EF2A4B601B87B5EA00DE935F /* QABoardConstants.h */,
+			);
+			path = QABoardLib;
+			sourceTree = "<group>";
+		};
+		EF2A4B3A1B87B57200DE935F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF2A4B3B1B87B57200DE935F /* Info.plist */,
+				EF2A4B3C1B87B57200DE935F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF2A4B531B87B57300DE935F /* QABoardLibTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF2A4B561B87B57300DE935F /* QABoardLibTests.m */,
+				EF2A4B541B87B57300DE935F /* Supporting Files */,
+			);
+			path = QABoardLibTests;
+			sourceTree = "<group>";
+		};
+		EF2A4B541B87B57300DE935F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF2A4B551B87B57300DE935F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF2A4B881B87B7F600DE935F /* QA Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EF2A4BB91B87C0CF00DE935F /* Masonry */,
+				EF2A4B8B1B87B7F600DE935F /* KeyboardViewController.h */,
+				EF2A4B8C1B87B7F600DE935F /* KeyboardViewController.m */,
+				EF2A4B891B87B7F600DE935F /* Supporting Files */,
+				EF2A4B951B87BF1C00DE935F /* default_words.json */,
+			);
+			path = "QA Keyboard";
+			sourceTree = "<group>";
+		};
+		EF2A4B891B87B7F600DE935F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF2A4B8A1B87B7F600DE935F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF2A4BB91B87C0CF00DE935F /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				EF2A4BBA1B87C0CF00DE935F /* Masonry */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		EF2A4BBA1B87C0CF00DE935F /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				EF2A4BBB1B87C0CF00DE935F /* MASCompositeConstraint.h */,
+				EF2A4BBC1B87C0CF00DE935F /* MASCompositeConstraint.m */,
+				EF2A4BBD1B87C0CF00DE935F /* MASConstraint+Private.h */,
+				EF2A4BBE1B87C0CF00DE935F /* MASConstraint.h */,
+				EF2A4BBF1B87C0CF00DE935F /* MASConstraint.m */,
+				EF2A4BC01B87C0CF00DE935F /* MASConstraintMaker.h */,
+				EF2A4BC11B87C0CF00DE935F /* MASConstraintMaker.m */,
+				EF2A4BC21B87C0CF00DE935F /* MASLayoutConstraint.h */,
+				EF2A4BC31B87C0CF00DE935F /* MASLayoutConstraint.m */,
+				EF2A4BC41B87C0CF00DE935F /* Masonry.h */,
+				EF2A4BC51B87C0CF00DE935F /* MASUtilities.h */,
+				EF2A4BC61B87C0CF00DE935F /* MASViewAttribute.h */,
+				EF2A4BC71B87C0CF00DE935F /* MASViewAttribute.m */,
+				EF2A4BC81B87C0CF00DE935F /* MASViewConstraint.h */,
+				EF2A4BC91B87C0CF00DE935F /* MASViewConstraint.m */,
+				EF2A4BCA1B87C0CF00DE935F /* NSArray+MASAdditions.h */,
+				EF2A4BCB1B87C0CF00DE935F /* NSArray+MASAdditions.m */,
+				EF2A4BCC1B87C0CF00DE935F /* NSArray+MASShorthandAdditions.h */,
+				EF2A4BCD1B87C0CF00DE935F /* NSLayoutConstraint+MASDebugAdditions.h */,
+				EF2A4BCE1B87C0CF00DE935F /* NSLayoutConstraint+MASDebugAdditions.m */,
+				EF2A4BCF1B87C0CF00DE935F /* View+MASAdditions.h */,
+				EF2A4BD01B87C0CF00DE935F /* View+MASAdditions.m */,
+				EF2A4BD11B87C0CF00DE935F /* View+MASShorthandAdditions.h */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF2A4B361B87B57200DE935F /* QABoardLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF2A4B5A1B87B57300DE935F /* Build configuration list for PBXNativeTarget "QABoardLib" */;
+			buildPhases = (
+				EF2A4B331B87B57200DE935F /* Sources */,
+				EF2A4B341B87B57200DE935F /* Frameworks */,
+				EF2A4B351B87B57200DE935F /* Resources */,
+				EF2A4B941B87B7F600DE935F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF2A4B8F1B87B7F600DE935F /* PBXTargetDependency */,
+			);
+			name = QABoardLib;
+			productName = QABoardLib;
+			productReference = EF2A4B371B87B57200DE935F /* QABoardLib.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF2A4B4F1B87B57300DE935F /* QABoardLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF2A4B5D1B87B57300DE935F /* Build configuration list for PBXNativeTarget "QABoardLibTests" */;
+			buildPhases = (
+				EF2A4B4C1B87B57300DE935F /* Sources */,
+				EF2A4B4D1B87B57300DE935F /* Frameworks */,
+				EF2A4B4E1B87B57300DE935F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF2A4B521B87B57300DE935F /* PBXTargetDependency */,
+			);
+			name = QABoardLibTests;
+			productName = QABoardLibTests;
+			productReference = EF2A4B501B87B57300DE935F /* QABoardLibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF2A4B861B87B7F600DE935F /* QA Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF2A4B911B87B7F600DE935F /* Build configuration list for PBXNativeTarget "QA Keyboard" */;
+			buildPhases = (
+				EF2A4B831B87B7F600DE935F /* Sources */,
+				EF2A4B841B87B7F600DE935F /* Frameworks */,
+				EF2A4B851B87B7F600DE935F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "QA Keyboard";
+			productName = "QA Keyboard";
+			productReference = EF2A4B871B87B7F600DE935F /* QA Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF2A4B2F1B87B57200DE935F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Techery;
+				TargetAttributes = {
+					EF2A4B361B87B57200DE935F = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					EF2A4B4F1B87B57300DE935F = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = EF2A4B361B87B57200DE935F;
+					};
+					EF2A4B861B87B7F600DE935F = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = EF2A4B321B87B57200DE935F /* Build configuration list for PBXProject "QABoardLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF2A4B2E1B87B57200DE935F;
+			productRefGroup = EF2A4B381B87B57200DE935F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF2A4B361B87B57200DE935F /* QABoardLib */,
+				EF2A4B4F1B87B57300DE935F /* QABoardLibTests */,
+				EF2A4B861B87B7F600DE935F /* QA Keyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF2A4B351B87B57200DE935F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2A4B461B87B57200DE935F /* Main.storyboard in Resources */,
+				EF2A4B4B1B87B57200DE935F /* LaunchScreen.xib in Resources */,
+				EF2A4B481B87B57200DE935F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF2A4B4E1B87B57300DE935F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF2A4B851B87B7F600DE935F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2A4B961B87BF1C00DE935F /* default_words.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF2A4B331B87B57200DE935F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2A4B431B87B57200DE935F /* ViewController.m in Sources */,
+				EF2A4B401B87B57200DE935F /* AppDelegate.m in Sources */,
+				EF2A4B3D1B87B57200DE935F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF2A4B4C1B87B57300DE935F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2A4B571B87B57300DE935F /* QABoardLibTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF2A4B831B87B7F600DE935F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2A4BD21B87C0CF00DE935F /* MASCompositeConstraint.m in Sources */,
+				EF2A4BD41B87C0CF00DE935F /* MASConstraintMaker.m in Sources */,
+				EF2A4BD91B87C0CF00DE935F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				EF2A4BD51B87C0CF00DE935F /* MASLayoutConstraint.m in Sources */,
+				EF2A4B8D1B87B7F600DE935F /* KeyboardViewController.m in Sources */,
+				EF2A4BD81B87C0CF00DE935F /* NSArray+MASAdditions.m in Sources */,
+				EF2A4BD71B87C0CF00DE935F /* MASViewConstraint.m in Sources */,
+				EF2A4BD31B87C0CF00DE935F /* MASConstraint.m in Sources */,
+				EF2A4BDA1B87C0CF00DE935F /* View+MASAdditions.m in Sources */,
+				EF2A4BD61B87C0CF00DE935F /* MASViewAttribute.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF2A4B521B87B57300DE935F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF2A4B361B87B57200DE935F /* QABoardLib */;
+			targetProxy = EF2A4B511B87B57300DE935F /* PBXContainerItemProxy */;
+		};
+		EF2A4B8F1B87B7F600DE935F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF2A4B861B87B7F600DE935F /* QA Keyboard */;
+			targetProxy = EF2A4B8E1B87B7F600DE935F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF2A4B441B87B57200DE935F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF2A4B451B87B57200DE935F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF2A4B491B87B57200DE935F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF2A4B4A1B87B57200DE935F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF2A4B581B87B57300DE935F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF2A4B591B87B57300DE935F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF2A4B5B1B87B57300DE935F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = QABoardLib/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF2A4B5C1B87B57300DE935F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = QABoardLib/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EF2A4B5E1B87B57300DE935F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QABoardLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QABoardLib.app/QABoardLib";
+			};
+			name = Debug;
+		};
+		EF2A4B5F1B87B57300DE935F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QABoardLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QABoardLib.app/QABoardLib";
+			};
+			name = Release;
+		};
+		EF2A4B921B87B7F600DE935F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "QA Keyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EF2A4B931B87B7F600DE935F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "QA Keyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF2A4B321B87B57200DE935F /* Build configuration list for PBXProject "QABoardLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF2A4B581B87B57300DE935F /* Debug */,
+				EF2A4B591B87B57300DE935F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF2A4B5A1B87B57300DE935F /* Build configuration list for PBXNativeTarget "QABoardLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF2A4B5B1B87B57300DE935F /* Debug */,
+				EF2A4B5C1B87B57300DE935F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF2A4B5D1B87B57300DE935F /* Build configuration list for PBXNativeTarget "QABoardLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF2A4B5E1B87B57300DE935F /* Debug */,
+				EF2A4B5F1B87B57300DE935F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF2A4B911B87B7F600DE935F /* Build configuration list for PBXNativeTarget "QA Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF2A4B921B87B7F600DE935F /* Debug */,
+				EF2A4B931B87B7F600DE935F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF2A4B2F1B87B57200DE935F /* Project object */;
+}
