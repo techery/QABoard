@@ -18,30 +18,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2xm-DK-WFT">
-                                <rect key="frame" x="16" y="36" width="568" height="30"/>
+                                <rect key="frame" x="16" y="65" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ifs-eA-WQm">
-                                <rect key="frame" x="16" y="74" width="568" height="172"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" priority="250" constant="300" id="mp6-fN-K4o"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Words Url" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ge-ug-u1N">
+                                <rect key="frame" x="16" y="28" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testers Url" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMx-D3-qFJ">
+                                <rect key="frame" x="16" y="111" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eF0-1b-SK5">
+                                <rect key="frame" x="16" y="148" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="2xm-DK-WFT" secondAttribute="trailing" constant="16" id="Esm-Gg-qug"/>
-                            <constraint firstItem="ifs-eA-WQm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="ExJ-pw-zrD"/>
-                            <constraint firstItem="2xm-DK-WFT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="NYT-AX-pC4"/>
-                            <constraint firstAttribute="trailing" secondItem="ifs-eA-WQm" secondAttribute="trailing" constant="16" id="aBv-s3-ogX"/>
-                            <constraint firstItem="ifs-eA-WQm" firstAttribute="top" secondItem="2xm-DK-WFT" secondAttribute="bottom" constant="8" id="aVf-DK-EG0"/>
-                            <constraint firstItem="2xm-DK-WFT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="aX4-FM-cmX"/>
+                            <constraint firstItem="eF0-1b-SK5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="0k3-78-Sda"/>
+                            <constraint firstItem="aMx-D3-qFJ" firstAttribute="top" secondItem="2xm-DK-WFT" secondAttribute="bottom" constant="16" id="1Kx-5u-xCG"/>
+                            <constraint firstItem="eF0-1b-SK5" firstAttribute="top" secondItem="aMx-D3-qFJ" secondAttribute="bottom" constant="16" id="3zc-2Z-YOs"/>
+                            <constraint firstItem="2xm-DK-WFT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="CXd-Ym-erC"/>
+                            <constraint firstAttribute="trailing" secondItem="aMx-D3-qFJ" secondAttribute="trailing" constant="16" id="Fu0-Zr-xoX"/>
+                            <constraint firstItem="aMx-D3-qFJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="YXq-Ms-SXj"/>
+                            <constraint firstAttribute="trailing" secondItem="6Ge-ug-u1N" secondAttribute="trailing" constant="16" id="ZAB-HQ-QhG"/>
+                            <constraint firstItem="6Ge-ug-u1N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="aND-Yy-ozX"/>
+                            <constraint firstItem="6Ge-ug-u1N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="bWa-lc-94G"/>
+                            <constraint firstAttribute="trailing" secondItem="eF0-1b-SK5" secondAttribute="trailing" constant="16" id="mRx-TO-ocr"/>
+                            <constraint firstAttribute="trailing" secondItem="2xm-DK-WFT" secondAttribute="trailing" constant="16" id="nGp-ra-k1m"/>
+                            <constraint firstItem="2xm-DK-WFT" firstAttribute="top" secondItem="6Ge-ug-u1N" secondAttribute="bottom" constant="16" id="ryr-es-kyR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="testersTextField" destination="eF0-1b-SK5" id="7jk-z6-CtR"/>
+                        <outlet property="wordsTextField" destination="2xm-DK-WFT" id="BS3-Kt-d6K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

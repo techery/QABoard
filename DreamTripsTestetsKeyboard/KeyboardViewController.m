@@ -8,6 +8,7 @@
 
 #import "KeyboardViewController.h"
 #import "Masonry.h"
+#import "DreamTripsKeyboardConstants.h"
 
 static NSString * const CellReuseID = @"CellReuseID";
 
@@ -22,6 +23,8 @@ static NSString * const CellReuseID = @"CellReuseID";
 @property (nonatomic, assign) BOOL isWords;
 @property (nonatomic, strong) NSArray *words;
 @property (nonatomic, strong) NSDictionary *testerDictionary;
+
+@property (nonatomic, strong) NSUserDefaults *sharedSettings;
 
 @end
 
@@ -119,7 +122,10 @@ static NSString * const CellReuseID = @"CellReuseID";
     }
     self.isWords = !self.isWords;
     
-    NSURL *url = [NSURL URLWithString:@"https://www.dropbox.com/s/ftb88f48d3e38k6/blns.json?dl=1"];
+    NSURL *url = [NSURL URLWithString:[self.sharedSettings objectForKey:kWordsKey]];
+    if (url.absoluteString.length < 1) {
+        return;
+    }
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     __weak KeyboardViewController *weakSelf = self;
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue currentQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
@@ -141,7 +147,10 @@ static NSString * const CellReuseID = @"CellReuseID";
     }
     self.isWords = !self.isWords;
     
-    NSURL *url = [NSURL URLWithString:@"https://www.dropbox.com/s/hqvyukgao8deglt/testers.json?dl=1"];
+    NSURL *url = [NSURL URLWithString:[self.sharedSettings objectForKey:kTestersKey]];
+    if (url.absoluteString.length < 1) {
+        return;
+    }
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     __weak KeyboardViewController *weakSelf = self;
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue currentQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
@@ -190,7 +199,15 @@ static NSString * const CellReuseID = @"CellReuseID";
         text = [self.testerDictionary objectForKey:key];
     }
     [self.textDocumentProxy insertText:text];
-    [self.textDocumentProxy insertText:@"\n"];
+    //[self.textDocumentProxy insertText:@"\n"];
 }
+
+- (NSUserDefaults *)sharedSettings {
+    if (!_sharedSettings) {
+        _sharedSettings = [[NSUserDefaults alloc] initWithSuiteName:KDreamTripsDefaults];
+    }
+    return _sharedSettings;
+}
+
 
 @end

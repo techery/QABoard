@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "DreamTripsKeyboardConstants.h"
 
 @interface ViewController ()
+
+@property (nonatomic, weak) IBOutlet UITextField *wordsTextField;
+@property (nonatomic, weak) IBOutlet UITextField *testersTextField;
+@property (nonatomic, strong) NSUserDefaults *sharedSettings;
 
 @end
 
@@ -16,12 +21,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.wordsTextField.text = [self.sharedSettings objectForKey:kWordsKey];
+    self.testersTextField.text = [self.sharedSettings objectForKey:kTestersKey];
+    
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(handleEnteredBackground)
+                                                 name: UIApplicationDidEnterBackgroundNotification
+                                               object: nil];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)handleEnteredBackground {
+    [self.sharedSettings setObject:self.wordsTextField.text forKey:kWordsKey];
+    [self.sharedSettings setObject:self.testersTextField.text forKey:kTestersKey];
+    [self.sharedSettings synchronize];
 }
+
+- (NSUserDefaults *)sharedSettings {
+    if (!_sharedSettings) {
+        _sharedSettings = [[NSUserDefaults alloc] initWithSuiteName:KDreamTripsDefaults];
+    }
+    return _sharedSettings;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 
 @end
