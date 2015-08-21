@@ -19,17 +19,22 @@
 
 @implementation ViewController
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [[NSNotificationCenter defaultCenter] addObserver: self
+                                                 selector: @selector(handleEnteredBackground)
+                                                     name: UIApplicationDidEnterBackgroundNotification
+                                                   object: nil];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.wordsTextField.text = [self.sharedSettings objectForKey:kWordsKey];
     self.testersTextField.text = [self.sharedSettings objectForKey:kTestersKey];
-    
-    [[NSNotificationCenter defaultCenter] addObserver: self
-                                             selector: @selector(handleEnteredBackground)
-                                                 name: UIApplicationDidEnterBackgroundNotification
-                                               object: nil];
-
 }
 
 - (void)handleEnteredBackground {
