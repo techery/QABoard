@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.DreamTripsKeyboard</string>
+		<string>group.QABoard</string>
 	</array>
 </dict>
 </plist>
