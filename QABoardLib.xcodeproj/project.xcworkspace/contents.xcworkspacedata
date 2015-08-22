@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/zen/tmp/DreamTripsKeyboard/QABoard.xcodeproj">
+      location = "self:QABoardLib.xcodeproj">
    </FileRef>
 </Workspace>
