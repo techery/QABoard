@@ -4,4 +4,4 @@
 static NSString * const kWordsKey = @"kWordsKey";
 static NSString * const kTestersKey = @"kTestersKey";
 
-static NSString * const kQABoardDefaults = @"group.QABoard";
+static NSString * const kQABoardDefaults = @"group.io.techery.QABoard.dev.keyboard";
